@@ -1,0 +1,75 @@
+h1{
+    text-align: center;
+    -webkit-text-stroke: 1px rgba(251, 251, 251, 0.081);
+
+}
+*{
+    font-family: Helvetica;
+    box-sizing: border-box;
+    -webkit-text-stroke: 1px rgba(251, 251, 251, 0.081);
+}
+
+body{
+    padding: 1rem;
+    background-image: url(/bgFundo.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom:  5px;
+}
+input, select, textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 1.1rem;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+.glass-form {
+    border: 2px solid #ffffff15;
+    background-color: rgba(255, 255, 255, 0.051);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+@media (max-width: 768px) {
+  .glass-form {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+  
