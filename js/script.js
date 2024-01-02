@@ -1,10 +1,9 @@
 const form = document.querySelector("#form")
-const nameInput = document.querySelector("name")
+const nameInput = document.querySelector("#name")
 const emailInput = document.querySelector("#email")
 const passwordInput = document.querySelector("#password")
 const jobSelect = document.querySelector("#job")
 const messageTextearea = document.querySelector("#message")
-
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -21,6 +20,10 @@ form.addEventListener("submit", (event) => {
 
     if(passwordInput.value === ""){
         alert("Por favor, insira uma senha!");
+        return;
+    }
+    if(messageTextearea.value === ""){
+        alert("Por favor, insira um Texto!");
         return;
     }
 
@@ -42,3 +45,11 @@ function isEmailValid(email){
 }
 
 //Função que valida a senha
+
+Toastify({
+
+    text: "This is a toast",
+    
+    duration: 3000
+    
+    }).showToast();

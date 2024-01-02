@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100&display=swap');
 
 body{
-  padding: 1rem;
-  /* background-image: url(/bgFundo.jpg); */
+  font-family: 'Poppins', sans-serif;
   background-color: #22242f;
-  background-size: cover;
-  background-position: center center;
+  background-position: center;
   
   display: flex;
   justify-content: center;
