@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100&display=swap');
 
-body{
-  font-family: 'Poppins', sans-serif;
-  background-color: #22242f;
-  background-position: center;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+button  {
+  padding: 10px;
+  /* border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: green; */
 }
 
 .notifications{
@@ -18,29 +16,52 @@ body{
   right: 20px;
 }
 
-.toast{
-  position: relative;
-  padding: 10px;
-  color: white;
-  margin-bottom: 10px;
-  width: 400px;
-  display: grid;
-  grid-template-columns: 70px 1fr 70px;
-  border-radius: 5px;
-  --color: #0abf30;
-  background-image: 
-      linear-gradient(
-        to right #0abf30, #22242f 30%
-      );
-}
-.toast i{
-  color: var(--color);
-}
+
+
+
+
 .toast .title{
   font-size: x-large;
   font-weight:bold ;
+} 
+.title span, .toast i:nth-child(3){
+  color:#fff;
+  opacity: 0.6;
+
 }
 
+@keyframes show {
+  0%{
+    transform: translateX(100%);
+  }
+  40%{
+    transform: translateX(-5%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10%);
+  }
+  
+}
+.toast::before{
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color);
+  width: 100%;
+  height: 3px;
+  content:'';
+  box-shadow: 0 0 10px var(--color);
+  animation: timeOut 5s linear 1 forwards
+}
+
+@keyframes timeOut{
+  to{
+      width: 0;
+  }
+}
+/* 
 h1{
   text-align: center;
   color: aliceblue;
@@ -64,60 +85,51 @@ form{
 
 label{
   /* font-weight: bold; */
-  margin-bottom:  5px;
-  color: aliceblue;
+  /* margin-bottom:  5px; */
+  /* color: aliceblue; */
   
-}
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1.1rem;
-}
-
-button  {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 1.1rem;
-  cursor: pointer;
-  background-color: green;
+  /* }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+  } */
   
   
-}
-select:invalid {
-  color: rgb(255, 2, 2);
-}
-
-.glass-form {
-  border: 2px solid #ffffff15;
-  background-color: rgba(255, 255, 255, 0.051);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  margin: 20px; /* Altere conforme necessário */
-  max-width: 800px; /* Altere conforme necessário */
-  width: 100%; /* Ocupa a largura máxima disponível */
-}
-
-
-@media (max-width: 768px) {
-  .glass-form {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .glass-form {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-button:hover {
-  transform: scale(1.07);
-  transition: all 0.5s;
-}
+  
+  /* select:invalid {
+    color: rgb(255, 2, 2);
+  } */
+  
+  /* .glass-form {
+    border: 2px solid #ffffff15;
+    background-color: rgba(255, 255, 255, 0.051);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); */
+    /* margin: 20px; Altere conforme necessário */
+    /* max-width: 800px; Altere conforme necessário */
+    /* width: 100%; Ocupa a largura máxima disponível */
+    /* } */
+    
+    
+    /* @media (max-width: 768px) {
+      .glass-form {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .glass-form {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+    
+    button:hover {
+      transform: scale(1.07);
+      transition: all 0.5s;
+    } */ 
