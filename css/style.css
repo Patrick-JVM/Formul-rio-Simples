@@ -23,6 +23,7 @@ body{
   top: 20px;
   right: 20px;
   padding: 15px;
+  z-index: 1000;
 }
 
 .toast{
@@ -39,7 +40,9 @@ body{
       linear-gradient(
           to right, #0abf3055, #22242f 30%
         );
-  animation: show 0.3s ease 1 forwards
+  animation: show 0.3s ease 1 forwards;
+  z-index: 1001;
+  
 }
 
 .toast i{
